@@ -41,7 +41,10 @@ function addTodo() {
     button.innerHTML = "X";
 
     // 체크박스를 눌렀을때 이벤트 리스너 실행 : click
-    checkbox.addEventListener("click", todoCheck)    
+    checkbox.addEventListener("click", todoCheck);
+    
+    // X버튼을 눌렀을때 이벤트 리스너 실행 : click
+    button.addEventListener("click", todoDelete);
 }
 
 // 체크박스 이벤트 리스너에 들어가는 함수
@@ -51,4 +54,11 @@ function todoCheck(e) {
         li.style.color = "lightgray";
     else 
         li.style.color = "black";
+}
+
+// X버튼 이벤트 리스너에 들어갈 함수
+function todoDelete(e) {
+    // li요소를 삭제
+    const li = e.target.parentNode;
+    li.remove();
 }
