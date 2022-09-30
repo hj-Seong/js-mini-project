@@ -17,7 +17,6 @@ function addTodo() {
     // todoInput -value 값을 들고옴
     const text = todoInput.value;
 
-
     // 새로 요소 생성
     // li , input type="checkbox", textNode, button
     const li = document.createElement("li");
@@ -36,5 +35,20 @@ function addTodo() {
     todoBoard.append(li);
         
     // todoInput.value값을 빈값으로 만들기
+    todoInput.value = "";
+
     // button에 X 문자열 추가
+    button.innerHTML = "X";
+
+    // 체크박스를 눌렀을때 이벤트 리스너 실행 : click
+    checkbox.addEventListener("click", todoCheck)    
+}
+
+// 체크박스 이벤트 리스너에 들어가는 함수
+function todoCheck(e) {
+    const li = e.target.parentNode;
+    if (e.target.checked) 
+        li.style.color = "lightgray";
+    else 
+        li.style.color = "black";
 }
