@@ -19,7 +19,10 @@ function onLoginSubmit(e) {
 
     // if문을 사용해서, name값이 없을때, 아래 실행되지않게
     // 함수에서 return을 사용하면 함수 종료
-    
+    if( name === "") {
+        // alert("닉네임을 입력해주세요")
+        return ;
+    }
 
     // value값을 title에 넣어줌
     // console.log(name) // 값이 제대로 들어갔는지, console.log로 확인
