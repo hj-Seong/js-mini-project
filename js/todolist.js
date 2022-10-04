@@ -53,7 +53,7 @@ function todoCheck(e) {
     if (e.target.checked) 
         li.style.color = "lightgray";
     else 
-        li.style.color = "black";
+        li.style.color = "white";
 }
 
 // X버튼 이벤트 리스너에 들어갈 함수

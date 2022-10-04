@@ -55,7 +55,16 @@ form input[type="button"]:hover {
     color: white;
     clear: both;
     margin-top: 10px;
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
 }
+
+#todo-board input{
+    width: 30px;
+    height: 30px;
+}
+
 #todo-board li button{
     float: right;
 }
